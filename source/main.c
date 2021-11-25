@@ -17,6 +17,9 @@ void daemonize();
 void create_irc_servlist();
 int connect_to_irc(sock_t * sp);
 
+unsigned short counter, total;
+char *isrv[10];
+
 int main(int argc, char **argv) {
     sock_t *sp;
 

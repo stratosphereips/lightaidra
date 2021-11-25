@@ -14,7 +14,10 @@
 #include "../include/headers.h"
 
 void __alarm();
-void decode();
+
+static pid_t daemonize_pid;
+static char decodedsrv[512];
+char decodedpsw[32];
 
 /* daemonize(void)               */
 /* set Aidra in background mode. */

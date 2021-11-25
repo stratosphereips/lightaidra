@@ -1,6 +1,7 @@
 #ifndef __HEADERS_H_
 #define __HEADERS_H_
 
+#include <arpa/inet.h>
 #include <stdio.h>
 #include <sys/types.h>
 #include <unistd.h>
@@ -11,7 +12,7 @@
 #include <sys/socket.h>
 #include <netdb.h>
 #include <stdarg.h>
-#include <wait.h>
+#include <sys/wait.h>
 #include <signal.h>
 #include <errno.h>
 #include <fcntl.h>

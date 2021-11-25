@@ -18,6 +18,14 @@ int sockwrite(int sd, const char *fmt, ...);
 int irc_requests(sock_t * sp, requests_t * req);
 int pub_requests(sock_t * sp, requests_t * req);
 
+static int pid_status;
+static char nt[3];
+
+char *data_ptr, channel[32];
+unsigned int recv_bytes;
+int max_pids;
+char netbuf[sizebuf];
+
 /* connect_to_irc(sock_t *) */
 /* make an irc connection.  */
 int connect_to_irc(sock_t *sp) {

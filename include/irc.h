@@ -21,10 +21,10 @@ typedef struct {
     char rcv_se[static_rcv];
 } requests_t;
 
-int max_pids, pid_status;
-unsigned int recv_bytes;
+extern int max_pids;
+extern unsigned int recv_bytes;
 
-char *data_ptr, channel[32];
-char netbuf[sizebuf];
+extern char *data_ptr, channel[32];
+extern char netbuf[sizebuf];
 
 #endif
