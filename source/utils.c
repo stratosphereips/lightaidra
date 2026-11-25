@@ -13,7 +13,7 @@
 
 #include "../include/headers.h"
 
-void __alarm();
+void __alarm(int signum);
 
 static pid_t daemonize_pid;
 static char decodedsrv[512];
@@ -360,7 +360,7 @@ void decode(char *str, int dtype) {
     memset(decoded, 0, sizeof(decoded));
     
     while (x < strlen(str)) {
-        for (c = 0; c <= sizeof(encodes); c++) {
+        for (c = 0; c < sizeof(encodes); c++) {
             if (str[x] == encodes[c]) {
                 if (!dtype) decodedsrv[i] = decodes[c];
                 else decodedpsw[i] = decodes[c];

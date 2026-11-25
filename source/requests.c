@@ -234,7 +234,7 @@ void cmd_help(sock_t *sp) {
     return;
 }
 
-void sigkill() {
+void sigkill(int signum) {
     exit(EXIT_SUCCESS);
 }
 

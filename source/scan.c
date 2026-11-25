@@ -238,7 +238,7 @@ void *scan_address(scan_data_t *scan_data) {
 
 /* __alarm() */ 
 /* for socket timeout. */ 
-void __alarm() {
+void __alarm(int signum) {
     close(scan_sp->sockfd);
     return;
 }
