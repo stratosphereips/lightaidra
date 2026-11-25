@@ -272,15 +272,16 @@ void create_irc_servlist() {
     token = strtok(s_copy, "|");
 
     while (token != NULL) {
-        if (x <= 10) {
+        if (x < 10) {
             strncpy(isrv[x], token, 31);
+            isrv[x][31] = '\0';
             x++;
         }
 
         token = strtok(NULL, "|");
     }
 
-    total = x-2;
+    total = x;
     return;
 }
 
